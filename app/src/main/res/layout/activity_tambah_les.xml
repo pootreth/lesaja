@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    tools:context=".TambahLesActivity">
+
+    <FrameLayout
+        android:layout_width="339dp"
+        android:layout_height="240dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/backward_arrow"
+            android:onClick="Balik"/>
+
+        <EditText
+            android:id="@+id/Birthday"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="80sp"
+            android:clickable="true"
+            android:focusable="false"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/Time"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="80sp"
+            android:clickable="true"
+            android:focusable="false"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="60sp"
+            android:text="@string/hari_dan_tanggal" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300sp"
+            android:layout_marginLeft="340sp"
+            android:layout_marginTop="60sp"
+            android:text="@string/jam" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110sp"
+            android:layout_marginTop="180sp"
+            android:background="@color/colorPrimary"
+            android:text="@string/cari_guru"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="110sp" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"
+            android:layout_marginTop="16sp"
+            android:text="@string/atur_jadwal_baru"
+            android:textSize="20sp" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

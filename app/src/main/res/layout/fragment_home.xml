@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="32dp"
+            android:background="#B51D1C"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="17sp"
+                android:text="@string/sd"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="16sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_green"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/flaskkecil"
+                android:onClick="PindahSD"/>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginLeft="40sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/ipa"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="98sp"
+                android:layout_marginLeft="98sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_blue"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/userskecil"
+                android:onClick="PindahSD"/>
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="182sp"
+                android:layout_marginLeft="182sp"
+                android:layout_marginTop="60sp"
+                android:background="#B51D1C"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/indonesiakecil"
+                android:onClick="PindahSD"/>
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="266sp"
+                android:layout_marginLeft="266sp"
+                android:layout_marginTop="60sp"
+                android:background="#B51D1C"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/united_kingdomkecil"
+                android:onClick="PindahSD"/>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120sp"
+                android:layout_marginLeft="120sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/ips"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="195sp"
+                android:layout_marginLeft="195sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/bahasa"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/bahasa"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="187sp"
+                android:layout_marginLeft="187sp"
+                android:layout_marginTop="150sp"
+                android:text="@string/indonesia"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="150sp"
+                android:text="@string/inggris"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="180sp"
+                android:background="@drawable/buttonku_yellow"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/calculatorkecil"
+                android:onClick="PindahSD"/>
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="98sp"
+                android:layout_marginLeft="98sp"
+                android:layout_marginTop="180sp"
+                android:background="@drawable/buttonku_donker"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/codingkecil"
+                tools:layout_editor_absoluteX="-14dp"
+                tools:layout_editor_absoluteY="244dp"
+                android:onClick="PindahSD"/>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11sp"
+                android:layout_marginLeft="11sp"
+                android:layout_marginTop="255sp"
+                android:text="@string/matematika"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120sp"
+                android:layout_marginLeft="120sp"
+                android:layout_marginTop="255sp"
+                android:text="@string/tik"
+                android:textColor="@android:color/white" />
+
+        </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mata_pelajaran"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="32dp"
+            android:background="#1A2380"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:text="@string/smp"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_ungu"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/atomkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="98sp"
+                android:layout_marginLeft="98sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_birulangit"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/dnakecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="182sp"
+                android:layout_marginLeft="182sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_yellow"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/calculatorkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="266sp"
+                android:layout_marginLeft="266sp"
+                android:layout_marginTop="60sp"
+                android:background="#1A2380"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/united_kingdomkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="180sp"
+                android:background="@drawable/buttonku_donker"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/codingkecil" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32sp"
+                android:layout_marginLeft="32sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/fisika"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="112sp"
+                android:layout_marginLeft="112sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/biologi"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180sp"
+                android:layout_marginLeft="180sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/matematika"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/bahasa"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="150sp"
+                android:text="@string/inggris"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginLeft="40sp"
+                android:layout_marginTop="255sp"
+                android:text="@string/tik"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="31dp"
+            android:background="#2CB5FA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:text="@string/sma"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_ungu"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/atomkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="98sp"
+                android:layout_marginLeft="98sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_birulangit"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/dnakecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="182sp"
+                android:layout_marginLeft="182sp"
+                android:layout_marginTop="60sp"
+                android:background="@drawable/buttonku_green"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/flaskkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton16"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="266sp"
+                android:layout_marginLeft="266sp"
+                android:layout_marginTop="60sp"
+                android:background="#2CB5FA"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/united_kingdomkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton17"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="180sp"
+                android:background="@drawable/buttonku_donker"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/codingkecil" />
+
+            <ImageButton
+                android:id="@+id/imageButton18"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:layout_marginStart="98sp"
+                android:layout_marginLeft="98sp"
+                android:layout_marginTop="180sp"
+                android:background="@drawable/buttonku_yellow"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/calculatorkecil" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32sp"
+                android:layout_marginLeft="32sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/fisika"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="112sp"
+                android:layout_marginLeft="112sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/biologi"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200sp"
+                android:layout_marginLeft="200sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/kimia"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="135sp"
+                android:text="@string/bahasa"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280sp"
+                android:layout_marginLeft="280sp"
+                android:layout_marginTop="150sp"
+                android:text="@string/inggris"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginLeft="40sp"
+                android:layout_marginTop="255sp"
+                android:text="@string/tik"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="96sp"
+                android:layout_marginLeft="96sp"
+                android:layout_marginTop="255sp"
+                android:text="@string/matematika"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
