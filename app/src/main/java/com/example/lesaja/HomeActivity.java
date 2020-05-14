@@ -18,6 +18,11 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -26,10 +31,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.graphics.Color;
+import android.widget.TextView;
+
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private FirebaseAuth mAuth;
+    private String uid;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         mAuth= FirebaseAuth.getInstance();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -52,10 +61,7 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-    }
 
-    @Override
-    public void onStart(){
         super.onStart();
         FirebaseUser currentUser= mAuth.getCurrentUser();
 
@@ -64,6 +70,52 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(loginIntent);
             finish();
         }
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("nama");
+        ref.addValueEventListener(new ValueEventListener(){
+            String keys;
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                keys=dataSnapshot.getValue(String.class);
+                View headerView = navigationView.getHeaderView(0);
+                TextView navUsername = (TextView) headerView.findViewById(R.id.namee);
+                navUsername.setText(keys);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
+
+        DatabaseReference ref2= FirebaseDatabase.getInstance().getReference().child("Users").child(uid).child("email");
+        ref2.addValueEventListener(new ValueEventListener(){
+            String keys;
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                keys=dataSnapshot.getValue(String.class);
+                View headerView = navigationView.getHeaderView(0);
+                TextView navUsername = (TextView) headerView.findViewById(R.id.textView);
+                navUsername.setText(keys);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+
+        });
+
+
+    }
+
+
+
+    public void pindahh(View v){
+        Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     @Override

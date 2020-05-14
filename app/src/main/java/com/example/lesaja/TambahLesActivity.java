@@ -2,7 +2,9 @@ package com.example.lesaja;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -22,10 +24,14 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.lesaja.ui.home.HomeFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.ValueEventListener;
+
 import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.text.TextUtils;
@@ -42,6 +48,8 @@ public class TambahLesActivity extends AppCompatActivity {
     private String matapel;
     private String tingkat;
     private String uid;
+    private int keyss;
+    private DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +76,6 @@ public class TambahLesActivity extends AppCompatActivity {
         {
             root.setBackgroundColor(Color.parseColor("#2CB5FA"));
         }
-
-
 
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             private void updateLabel() {
@@ -131,15 +137,17 @@ public class TambahLesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!isEmpty(edittext.getText().toString()) &&
-                        !isEmpty(chooseTime.getText().toString()))
+                        !isEmpty(chooseTime.getText().toString())){
                     submitLes(new Les(edittext.getText().toString(),
                             chooseTime.getText().toString(), matapel, tingkat, uid));
-                else
+                    }
+                else {
                     Snackbar.make(findViewById(R.id.button4), "Data Les tidak boleh kosong", Snackbar.LENGTH_LONG).show();
-                            InputMethodManager imm = (InputMethodManager)
-                                    getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(
-                        chooseTime.getWindowToken(), 0);
+                    InputMethodManager imm = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(
+                            chooseTime.getWindowToken(), 0);
+                }
             }
         });
 
@@ -150,6 +158,7 @@ public class TambahLesActivity extends AppCompatActivity {
     }
 
     private void submitLes(Les les) {
+
         database.child("les").push().setValue(les).addOnSuccessListener(this, new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
